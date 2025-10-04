@@ -354,9 +354,7 @@ configSS(){
     "password":"${PASSWORD}",
     "timeout":600,
     "method":"${METHOD}",
-    "nameserver":"8.8.8.8",
-	"plugin":"v2ray-plugin",
-	"plugin_opts":"server"
+    "nameserver":"8.8.8.8"
 }
 EOF
 }
@@ -464,7 +462,7 @@ install() {
 
     preinstall
     installSS
-	install_v2
+	#install_v2
     configSS
 	
     setFirewall
@@ -495,7 +493,7 @@ update() {
         return
     fi
     installSS
-	update_v2
+	#update_v2
     restart
 }
 
